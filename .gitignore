@@ -1,0 +1,7 @@
+# Compiled shared libraries
+*.so
+*.dylib
+*.dll
+
+# Build artifacts
+build/
