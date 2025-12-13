@@ -1,7 +1,7 @@
 image: archlinux
 
 secrets:
-  - ea8ca0d9-1859-4db5-bb99-8f12baf60b59
+  - 380b3418-72be-46d4-bc76-c0178407accc
 
 packages:
   - tree-sitter-cli
