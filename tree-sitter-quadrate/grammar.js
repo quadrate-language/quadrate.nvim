@@ -325,7 +325,7 @@ module.exports = grammar({
       // Logic
       'and', 'or', 'not', 'xor',
       // Bitwise
-      'lshift', 'rshift',
+      'shl', 'shr',
       // Type casting
       'cast',
       // I/O
@@ -333,7 +333,7 @@ module.exports = grammar({
       // Threading
       'detach', 'spawn', 'wait',
       // Error handling
-      'error',
+      'err', 'panic',
       // Memory management
       'free',
     )),

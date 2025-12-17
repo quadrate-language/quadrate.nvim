@@ -8,10 +8,11 @@ if exists("b:current_syntax")
 endif
 
 " Keywords
-syn keyword quadrateKeyword fn const use pub struct import as
-syn keyword quadrateConditional if else
-syn keyword quadrateRepeat loop for break continue
-syn keyword quadrateStatement defer
+syn keyword quadrateKeyword fn const use pub struct import as test ctx
+syn keyword quadrateConditional if else switch
+syn keyword quadrateRepeat loop for while break continue
+syn keyword quadrateStatement defer return
+syn keyword quadrateBoolean true false Ok Err
 
 " Import block region (to highlight pub inside import blocks)
 syn region quadrateImportBlock start="\<import\s\+\w\+\s*{" end="}" contains=quadrateKeyword,quadrateComment transparent
@@ -35,8 +36,11 @@ syn keyword quadrateMath ceil floor round min max
 " Comparison operations
 syn keyword quadrateComparison eq neq lt gt lte gte within
 
+" Bitwise operations
+syn keyword quadrateBitwise and or xor not shl shr
+
 " Array operations
-syn keyword quadrateArray append makef makei makep makes set
+syn keyword quadrateArray make makef makei makep makes append set
 
 " Type casting
 syn keyword quadrateCast cast
@@ -48,7 +52,7 @@ syn keyword quadrateIO print prints printv printsv nl read call
 syn keyword quadrateThread spawn wait detach
 
 " Error handling
-syn keyword quadrateError error
+syn keyword quadrateError err panic
 
 " Comments
 syn keyword quadrateTodo TODO FIXME XXX NOTE contained
@@ -90,9 +94,11 @@ hi def link quadrateKeyword       Keyword
 hi def link quadrateConditional   Conditional
 hi def link quadrateRepeat        Repeat
 hi def link quadrateStatement     Statement
+hi def link quadrateBoolean       Boolean
 hi def link quadrateType          Type
 hi def link quadrateStack         Function
 hi def link quadrateArithmetic    Function
+hi def link quadrateBitwise       Function
 hi def link quadrateMath          Function
 hi def link quadrateComparison    Function
 hi def link quadrateArray         Function

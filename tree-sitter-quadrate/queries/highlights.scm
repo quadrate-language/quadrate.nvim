@@ -146,7 +146,7 @@
 
 ; Built-in bitwise operations
 [
-  "lshift" "rshift"
+  "shl" "shr"
 ] @function.builtin
 
 ; Built-in type casting operations
@@ -166,7 +166,7 @@
 
 ; Built-in error handling
 [
-  "error"
+  "err" "panic"
 ] @function.builtin
 
 ; Parameters in stack signatures
