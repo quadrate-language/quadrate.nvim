@@ -43,7 +43,7 @@ syn keyword quadrateBitwise and or xor not shl shr
 syn keyword quadrateArray make makef makei makep makes append set
 
 " Type casting
-syn keyword quadrateCast cast
+syn keyword quadrateCast cast sizeof
 
 " I/O operations
 syn keyword quadrateIO print prints printv printsv nl read call
