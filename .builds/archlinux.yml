@@ -1,6 +1,7 @@
 image: archlinux
 
 packages:
+  - nodejs
   - tree-sitter-cli
 
 sources:
