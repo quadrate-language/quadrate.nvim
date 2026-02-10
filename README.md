@@ -254,7 +254,7 @@ Diagnostics update on file open/save:
 Patches welcome!
 
 **Email**: ~klahr/quadrate@lists.sr.ht
-**GitHub**: https://github.com/quadrate-lang/quadrate.nvim
+**SourceHut**: https://git.sr.ht/~klahr/quadrate.nvim
 
 ---
 
