@@ -4,7 +4,7 @@ Stack operations
 
 fn test( -- ) {
     5 dup swap drop
-    over rot nip tuck
+    over rot nip
 }
 
 --------------------------------------------------------------------------------
@@ -15,7 +15,6 @@ fn test( -- ) {
     signature: (stack_signature)
     body: (block
       (number)
-      (builtin_operation)
       (builtin_operation)
       (builtin_operation)
       (builtin_operation)

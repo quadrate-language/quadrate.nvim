@@ -166,11 +166,9 @@ module.exports = grammar({
       $.local_declaration,
       $.if_expression,
       $.for_loop,
-      $.while_loop,
       $.loop_statement,
       $.switch_expression,
       $.defer_block,
-      $.ctx_block,
       $.break_statement,
       $.continue_statement,
       $.return_statement,
@@ -222,12 +220,6 @@ module.exports = grammar({
       field('body', $.block),
     ),
 
-    // While loop: condition while { ... next-condition }
-    while_loop: $ => seq(
-      'while',
-      field('body', $.block),
-    ),
-
     // Infinite loop: loop { ... }
     loop_statement: $ => seq(
       'loop',
@@ -259,12 +251,6 @@ module.exports = grammar({
     // Defer block: defer { ... }
     defer_block: $ => seq(
       'defer',
-      field('body', $.block),
-    ),
-
-    // Ctx block: ctx { ... }
-    ctx_block: $ => seq(
-      'ctx',
       field('body', $.block),
     ),
 
@@ -312,8 +298,9 @@ module.exports = grammar({
     // Built-in operations
     builtin_operation: $ => prec(1, choice(
       // Stack operations
-      'dup', 'swap', 'drop', 'over', 'rot', 'nip', 'tuck', 'pick', 'roll',
-      'dup2', 'swap2', 'over2', 'drop2', 'dupd', 'swapd', 'overd', 'nipd', 'depth', 'clear',
+      'dup', 'dup2', 'swap', 'drop', 'over', 'rot', 'nip', 'pick', 'roll', 'depth', 'clear',
+      // Arrays
+      'len', 'nth', 'append', 'makep',
       // Arithmetic
       'add', 'sub', 'mul', 'div', 'inc', 'dec', 'abs', 'sqrt', 'sq', 'pow', 'mod',
       'neg', 'inv', 'fac', 'cb', 'cbrt',
@@ -323,7 +310,7 @@ module.exports = grammar({
       // Comparison
       'eq', 'neq', 'lt', 'gt', 'lte', 'gte', 'within',
       // Logic
-      'and', 'or', 'not', 'xor',
+      'and', 'or', 'not', 'lnot', 'xor',
       // Bitwise
       'shl', 'shr',
       // Type casting

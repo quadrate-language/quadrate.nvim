@@ -22,14 +22,15 @@ fn test( -- ) {
         type_arg: (identifier)))))
 
 ================================================================================
-New stack operations
+Array and logic operations
 ================================================================================
 
 fn test( -- ) {
-    10 20 dupd
-    30 40 swapd
-    50 60 overd
-    70 80 nipd
+    3 makep -> a
+    a 0 nth
+    a len
+    a 7 append
+    0 lnot
 }
 
 --------------------------------------------------------------------------------
@@ -40,15 +41,17 @@ fn test( -- ) {
     signature: (stack_signature)
     body: (block
       (number)
+      (builtin_operation)
+      (local_declaration
+        name: (identifier))
+      (identifier)
       (number)
       (builtin_operation)
-      (number)
+      (identifier)
+      (builtin_operation)
+      (identifier)
       (number)
       (builtin_operation)
-      (number)
-      (number)
-      (builtin_operation)
-      (number)
       (number)
       (builtin_operation))))
 

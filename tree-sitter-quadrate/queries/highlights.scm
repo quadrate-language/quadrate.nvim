@@ -14,10 +14,8 @@
   "if"
   "else"
   "for"
-  "while"
   "switch"
   "defer"
-  "ctx"
   "loop"
 ] @keyword.control
 
@@ -118,8 +116,8 @@
 ; Built-in stack operations
 (builtin_operation) @function.builtin
 [
-  "dup" "swap" "drop" "over" "rot" "nip" "tuck" "pick" "roll"
-  "dup2" "swap2" "over2" "drop2" "dupd" "swapd" "overd" "nipd" "depth" "clear"
+  "dup" "dup2" "swap" "drop" "over" "rot" "nip" "pick" "roll" "depth" "clear"
+  "len" "nth" "append" "makep"
 ] @function.builtin
 
 ; Built-in arithmetic operations
@@ -141,7 +139,7 @@
 
 ; Built-in logic operations
 [
-  "and" "or" "not" "xor"
+  "and" "or" "not" "lnot" "xor"
 ] @function.builtin
 
 ; Built-in bitwise operations

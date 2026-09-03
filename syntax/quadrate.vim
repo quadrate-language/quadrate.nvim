@@ -8,9 +8,9 @@ if exists("b:current_syntax")
 endif
 
 " Keywords
-syn keyword quadrateKeyword fn const use pub struct import as test ctx
+syn keyword quadrateKeyword fn const use pub struct import as test var packed
 syn keyword quadrateConditional if else switch
-syn keyword quadrateRepeat loop for while break continue
+syn keyword quadrateRepeat loop for break continue
 syn keyword quadrateStatement defer return
 syn keyword quadrateBoolean true false Ok Err
 
@@ -21,8 +21,7 @@ syn region quadrateImportBlock start="\<import\s\+\w\+\s*{" end="}" contains=qua
 syn keyword quadrateType i64 f64 str ptr any
 
 " Built-in stack operations
-syn keyword quadrateStack dup dup2 dupd swap swap2 swapd drop drop2
-syn keyword quadrateStack over over2 overd rot nip nipd tuck
+syn keyword quadrateStack dup dup2 swap drop over rot nip
 syn keyword quadrateStack pick roll depth clear len nth free
 
 " Arithmetic operations
@@ -37,7 +36,7 @@ syn keyword quadrateMath ceil floor round min max
 syn keyword quadrateComparison eq neq lt gt lte gte within
 
 " Bitwise operations
-syn keyword quadrateBitwise and or xor not shl shr
+syn keyword quadrateBitwise and or xor not lnot shl shr
 
 " Array operations
 syn keyword quadrateArray make makef makei makep makes append set
