@@ -4,7 +4,7 @@ description = "quadrate grammar for the tree-sitter parsing library"
 version = "0.0.1"
 keywords = ["incremental", "parsing", "quadrate"]
 categories = ["parsing", "text-editors"]
-repository = "https://git.sr.ht/~klahr/quadrate.nvim"
+repository = "https://github.com/quadrate-language/quadrate.nvim"
 edition = "2018"
 license = "MIT"
 

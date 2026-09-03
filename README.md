@@ -1,8 +1,8 @@
 # quadrate.nvim
 
-> **Canonical repository:** https://git.sr.ht/~klahr/quadrate.nvim
+> **Canonical repository:** https://github.com/quadrate-language/quadrate.nvim
 
-Neovim plugin for the [Quadrate](https://git.sr.ht/~klahr/quadrate) programming language with LSP support and tree-sitter syntax highlighting.
+Neovim plugin for the [Quadrate](https://github.com/quadrate-language/quadrate) programming language with LSP support and tree-sitter syntax highlighting.
 
 ---
 
@@ -39,7 +39,7 @@ Neovim plugin for the [Quadrate](https://git.sr.ht/~klahr/quadrate) programming 
 
 ```bash
 # From the Quadrate repository
-git clone https://git.sr.ht/~klahr/quadrate
+git clone https://github.com/quadrate-language/quadrate
 cd quadrate
 make release && sudo make install
 ```
@@ -58,7 +58,7 @@ make debug
 
 ```lua
 {
-  'quadrate-lang/quadrate.nvim',
+  'quadrate-language/quadrate.nvim',
   dependencies = { 'neovim/nvim-lspconfig' },
 }
 ```
@@ -67,7 +67,7 @@ make debug
 
 ```lua
 use {
-  'quadrate-lang/quadrate.nvim',
+  'quadrate-language/quadrate.nvim',
   requires = { 'neovim/nvim-lspconfig' },
 }
 ```
@@ -75,7 +75,7 @@ use {
 ### vim-plug
 
 ```vim
-Plug 'quadrate-lang/quadrate.nvim'
+Plug 'quadrate-language/quadrate.nvim'
 ```
 
 ### Manual Installation
@@ -83,7 +83,7 @@ Plug 'quadrate-lang/quadrate.nvim'
 Clone and symlink:
 
 ```bash
-git clone https://git.sr.ht/~klahr/quadrate.nvim ~/.local/share/nvim/site/pack/plugins/start/quadrate.nvim
+git clone https://github.com/quadrate-language/quadrate.nvim ~/.local/share/nvim/site/pack/plugins/start/quadrate.nvim
 ```
 
 Or symlink individual files:
@@ -251,10 +251,10 @@ Diagnostics update on file open/save:
 
 ## Contributing
 
-Patches welcome!
+Pull requests welcome!
 
-**Email**: ~klahr/quadrate@lists.sr.ht
-**SourceHut**: https://git.sr.ht/~klahr/quadrate.nvim
+**Issues**: https://github.com/quadrate-language/quadrate.nvim/issues
+**GitHub**: https://github.com/quadrate-language/quadrate.nvim
 
 ---
 
@@ -268,7 +268,7 @@ See [LICENSE](./LICENSE) for full terms.
 
 ## Resources
 
-- **Quadrate Language**: https://git.sr.ht/~klahr/quadrate
+- **Quadrate Language**: https://github.com/quadrate-language/quadrate
 - **Documentation**: https://quad.r8.rs
 - **nvim-lspconfig**: https://github.com/neovim/nvim-lspconfig
 - **nvim-treesitter**: https://github.com/nvim-treesitter/nvim-treesitter
