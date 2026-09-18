@@ -33,8 +33,11 @@ module.exports = grammar({
     // Function definition: fn name( x:float y:float -- z:float ) { ... }
     // or: pub fn name( x:float y:float -- z:float ) { ... }
     // or: fn name<T>( x:T -- y:T ) { ... } (generic)
+    // The modifiers follow `pub` in any order: `inline` asks for inlining at the
+    // call sites, `stack` leaves the inputs on the stack instead of binding them.
     function_definition: $ => seq(
       optional('pub'),
+      repeat(choice('inline', 'stack')),
       'fn',
       field('name', $.identifier),
       field('type_parameters', optional($.type_parameters)),
@@ -92,9 +95,14 @@ module.exports = grammar({
 
     parameter_list: $ => repeat1($.parameter),
 
-    parameter: $ => seq(
-      field('name', $.identifier),
-      ':',
+    // `name:type`, or a bare type: a `stack fn` binds nothing, so its parameters
+    // may carry a name as documentation or leave the slot unnamed.
+    parameter: $ => choice(
+      seq(
+        field('name', $.identifier),
+        ':',
+        field('type', $.type),
+      ),
       field('type', $.type),
     ),
 

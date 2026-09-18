@@ -8,7 +8,7 @@ if exists("b:current_syntax")
 endif
 
 " Keywords
-syn keyword quadrateKeyword fn const use pub struct import as test var packed
+syn keyword quadrateKeyword fn const use pub struct import as test var packed inline stack
 syn keyword quadrateConditional if else switch
 syn keyword quadrateRepeat loop for break continue
 syn keyword quadrateStatement defer return

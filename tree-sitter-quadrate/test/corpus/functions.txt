@@ -159,3 +159,58 @@ pub fn ten() {
     signature: (stack_signature)
     body: (block
       (identifier))))
+
+================================================================================
+Stack function with documentary parameter names
+================================================================================
+
+stack fn sq( n:i64 -- r:i64 ) {
+    dup *
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    name: (identifier)
+    signature: (stack_signature
+      (parameter_list
+        (parameter
+          name: (identifier)
+          type: (type
+            (identifier))))
+      (parameter_list
+        (parameter
+          name: (identifier)
+          type: (type
+            (identifier)))))
+    body: (block
+      (builtin_operation)
+      (operator_symbol))))
+
+================================================================================
+Stack function with unnamed parameters and every modifier
+================================================================================
+
+pub inline stack fn twice( i64 -- r:i64 ) {
+    2 *
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    name: (identifier)
+    signature: (stack_signature
+      (parameter_list
+        (parameter
+          type: (type
+            (identifier))))
+      (parameter_list
+        (parameter
+          name: (identifier)
+          type: (type
+            (identifier)))))
+    body: (block
+      (number)
+      (operator_symbol))))

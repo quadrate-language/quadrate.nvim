@@ -1,6 +1,8 @@
 ; Keywords
 [
   "pub"
+  "inline"
+  "stack"
   "fn"
   "struct"
   "const"
